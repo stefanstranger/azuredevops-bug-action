@@ -1,0 +1,28 @@
+name: Error
+
+on: [repository_dispatch]
+
+jobs:
+  error:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Throw error in PowerShell script
+        if: github.event.action == 'inline'
+        run: |
+          throw 'something failed';
+      - name: The job has failed
+        uses: stefanstranger/azuredevops-bug-action@master
+        if: failure()
+        with:
+          OrganizationName: "stefanstranger"
+          PAT: "PAT"
+          ProjectName: "Contoso"
+          AreaPath: "Contoso\\Automation"
+          IterationPath: "Contoso"
+          GithubToken: "GithubToken"
+          WorkflowFileName: "error.yml"
+        env:
+          PAT: ${{ secrets.PAT}}
+          GithubToken: ${{ secrets.githubtoken}}

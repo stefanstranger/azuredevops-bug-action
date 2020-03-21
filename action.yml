@@ -1,0 +1,44 @@
+# action.yml
+name: "GitHub Action to create an Azure DevOps Bug Workitem when a workflow fails"
+author: "Stefan Stranger"
+description: "Creates an Azure DevOps Bug Workitem on failed Github Workflows"
+inputs:
+  OrganizationName: # Azure DevOps Organization (Account) name
+    description: "Name of Azure DevOps Organization"
+    required: true
+  PATName: # Azure DevOps Personal Access Token (PAT) stored in secret
+    description: "Name of Github Action environment variable for PAT"
+    required: true
+  ProjectName:
+    description: "Name of Azure DevOps Project"
+    required: true
+  AreaPath: # Azure DevOps Area Path
+    description: "Azure DevOps Area Path. Example: 'Contoso\\Automation'"
+    required: true
+  IterationPath: # Azure DevOps Iteration Path
+    description: "Azure DevOps Iteration Path. Example: 'Contoso'"
+    required: true
+  GithubToken: # Github Token value stored as secret
+    description: "Github Token value stored as secret"
+    required: true
+  WorkflowFileName: # Github Workflow name (main.yml)
+    description: "Github Workflow file name"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - -OrganizationName
+    - ${{inputs.OrganizationName}}
+    - -PAT
+    - ${{inputs.PAT}}
+    - -ProjectName
+    - ${{inputs.ProjectName}}
+    - -AreaPath
+    - ${{inputs. AreaPath}}
+    - -IterationPath
+    - ${{inputs.IterationPath}}
+    - -GithubToken
+    - ${{inputs.GithubToken}}
+    - -WorkflowFileName
+    - ${{inputs.WorkflowFileName}}
