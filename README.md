@@ -39,7 +39,7 @@ jobs:
         run: |
           throw 'something failed';
       - name: The job has failed
-        uses: stefanstranger/azuredevops-bug-action@master
+        uses: stefanstranger/azuredevops-bug-action@v1
         if: failure()
         with:
           OrganizationName: "stefanstranger"
