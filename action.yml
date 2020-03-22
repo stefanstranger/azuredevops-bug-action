@@ -42,3 +42,6 @@ runs:
     - ${{inputs.GithubToken}}
     - -WorkflowFileName
     - ${{inputs.WorkflowFileName}}
+branding:
+  icon: "alert-triangle"
+  color: "red"
