@@ -77,7 +77,7 @@ The minimal scope authorization for Work Items is Read, write & manage.
 
 Add the PAT output as [a secret](https://aka.ms/create-secrets-for-GitHub-workflows) (let's say with the name `PAT`) in the GitHub repository.
 
-![PAT Github Secret screenshot](PATGHSecret.png)
+![PAT Github Secret screenshot](PATGHSecret.png =700x533)
 
 ## Configure Github Token
 
