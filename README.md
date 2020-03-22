@@ -73,7 +73,7 @@ More information about creating an Azure DevOps Personal Access token can be fou
 
 The minimal scope authorization for Work Items is Read, write & manage.
 
-<img src="PAT.png" alt="PAT configuration" width="700" hight="533"/>
+<img src="PAT.png" alt="PAT configuration" width="700" height="533"/>
 
 Add the PAT output as [a secret](https://aka.ms/create-secrets-for-GitHub-workflows) (let's say with the name `PAT`) in the GitHub repository.
 
