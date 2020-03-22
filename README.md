@@ -1,4 +1,4 @@
-# Github Action to create a Azure DevOps Bug Work Item for failing Github Workflow actions
+# Github Action to create an Azure DevOps Bug Work Item for failing Github Workflow actions
 
 ## Automate your GitHub workflows using Azure Actions
 
@@ -6,15 +6,15 @@
 
 # Github Action Azure DevOps Bug Work Item
 
-With the Github Action Azure DevOps Bug WorkItem you can create an Azure DevOps Bug WorkItem for failed Github Workflow Actions.
+With the Github Action Azure DevOps Bug Work Item you can create an Azure DevOps Bug Work Item for failed Github Workflow Actions.
 
 Screenshot Github Workflow with failed Action
 
-![](FailedWorkflow.png)
+![Failed Workflow Screenshot](FailedWorkflow.png)
 
 Screenshot Bug created in Azure DevOps Backlog
 
-![](AzDBugWorkItem.png)
+![Azure DevOps Bug Work Item screenshot](AzDBugWorkItem.png)
 
 # Azure DevOps Bug Work Items
 
@@ -65,8 +65,7 @@ jobs:
 | GithubToken      | Github Secret Name for Github Token stored as Github environment variable |
 | WorkflowFileName | Github Workflow file name                                                 |
 
-
-## Configure Personal Access Token (PAT) 
+## Configure Personal Access Token (PAT)
 
 For creating the Azure DevOps Bug Work Item we need to create an Azure DevOps Personal Access Token.
 
@@ -78,7 +77,7 @@ The minimal scope authorization for Work Items is Read, write & manage.
 
 Add the PAT output as [a secret](https://aka.ms/create-secrets-for-GitHub-workflows) (let's say with the name `PAT`) in the GitHub repository.
 
-![](PATGHSecret.png)
+![PAT Github Secret screenshot](PATGHSecret.png)
 
 ## Configure Github Token
 
@@ -97,4 +96,4 @@ Your Github Token needs the following permissions:
 
 Add the Github Token [a secret](https://aka.ms/create-secrets-for-GitHub-workflows) (let's say with the name `githubtoken`) in the GitHub repository.
 
-![](GithubTokenSecret.png)
+![Github Token Secret screenshot](GithubTokenSecret.png)
