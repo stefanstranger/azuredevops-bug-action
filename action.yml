@@ -6,7 +6,7 @@ inputs:
   OrganizationName: # Azure DevOps Organization (Account) name
     description: "Name of Azure DevOps Organization"
     required: true
-  PATName: # Azure DevOps Personal Access Token (PAT) stored in secret
+  PAT: # Azure DevOps Personal Access Token (PAT) stored in secret
     description: "Name of Github Action environment variable for PAT"
     required: true
   ProjectName:

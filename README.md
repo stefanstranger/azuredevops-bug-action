@@ -100,6 +100,10 @@ Add the Github Token [a secret](https://aka.ms/create-secrets-for-GitHub-workflo
 
 # Change log
 
-* 03-22-2020 - Initial release of Github Action
+* 03-22-2020
+    * Initial release of Github Action
 
-* 09-23-2020 - Updated PowerShell Docker file with latest Alpine PowerShell version (mcr.microsoft.com/powershell:lts-alpine-3.10)
+* 09-23-2020
+    * Updated PowerShell Docker file with latest Alpine PowerShell version (mcr.microsoft.com/powershell:lts-alpine-3.10)
+    * Fixed input name of Github Action
+    
