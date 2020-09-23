@@ -97,3 +97,9 @@ Your Github Token needs the following permissions:
 Add the Github Token [a secret](https://aka.ms/create-secrets-for-GitHub-workflows) (let's say with the name `githubtoken`) in the GitHub repository.
 
 ![Github Token Secret screenshot](GithubTokenSecret.png)
+
+# Change log
+
+* 03-22-2020 - Initial release of Github Action
+
+* 09-23-2020 - Updated PowerShell Docker file with latest Alpine PowerShell version (mcr.microsoft.com/powershell:lts-alpine-3.10)
